@@ -3,10 +3,14 @@ Frontend technologies used: Next.js, Typescript, React.js, Axios, Antd, Tailwind
 
 ## Features:
 1- Display the fetched posts in a table using Ant Design’s Table component.
+
 2- Posting new posts in modal component that includes Form Component using Ant Design to add a new post, and simulate the response by showing it via console since the JsonServer is immutable.
+
 3- Use Ant Design’s to implement basic error handling for API requests to display errors to the user with data validation for inputs using rules.
+
 4- Editing selected post in modal component that includes Form Component using Ant Design to edit the post, and simulate the response by showing it via console since the JsonServer is immutable.
-5- Ability to delete posts
+
+5- Ability to delete posts.
 
 
 ## Running locally in development mode
