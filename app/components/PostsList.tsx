@@ -94,10 +94,9 @@ const PostsList: React.FC<postsListProps> = ({ posts }) => {
     },
   ];
 
-  // Ensure data is available before calling .map()
   const dataSource =
     posts?.map((item) => ({
-      key: item.id, // Ant Design requires a unique "key" prop for each row
+      key: item.id,
       id: item.id,
       title: item.title,
       body: item.body,
@@ -115,7 +114,7 @@ const PostsList: React.FC<postsListProps> = ({ posts }) => {
             layout="vertical"
             autoComplete="off"
             onFinish={(values) => {
-              handleEditPost(values, recordToEdit); // Pass form values and the record you want to edit
+              handleEditPost(values, recordToEdit);
             }}
           >
             <h3 className="text-center font-bold"> Edit post </h3>
@@ -129,12 +128,8 @@ const PostsList: React.FC<postsListProps> = ({ posts }) => {
               ]}
               hasFeedback
             >
-              <Input
-                placeholder="Enter title "
-                // onChange={(e) => setTitleValue(e.target.value)}
-              />
+              <Input placeholder="Enter title " />
             </Form.Item>
-
             <Form.Item
               label="Body"
               name="body"
@@ -145,11 +140,7 @@ const PostsList: React.FC<postsListProps> = ({ posts }) => {
               ]}
               hasFeedback
             >
-              <Input
-                placeholder="Enter body"
-                // value={recordToEdit ? recordToEdit.body : ""}
-                // onChange={(e) => setBodyValue(e.target.value)}
-              />
+              <Input placeholder="Enter body" />
             </Form.Item>
             <Form.Item>
               <Button type="primary" htmlType="submit">
@@ -159,16 +150,6 @@ const PostsList: React.FC<postsListProps> = ({ posts }) => {
           </Form>
         )}
       </Modal>
-
-      {/* <Modal
-          open={openModalDelete}
-          onCancel={() => setOpenModalDelete(false)}
-          onOk={() => {
-            setOpenModalDelete(false); // Close the modal
-          }}
-        >
-          <p>Are you sure you want to delete this record?</p>
-        </Modal> */}
     </div>
   );
 };

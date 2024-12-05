@@ -16,7 +16,7 @@ const AddPost = () => {
         color="primary"
         variant="filled"
       >
-        Cearte <FaPlus size={15} />
+        Create <FaPlus size={15} />
       </Button>
       <ModalComponent
         modalOpen={isModalOpen}
